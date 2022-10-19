@@ -91,6 +91,33 @@
                 document.writeln ("<br/>"); zadziała tylko w zakresie blokowym */
                 }
             WytlumaczenieVarLet();
+            document.writeln ("<br/>");
+
+            function loop()
+            {
+                for (i = 0; i < 10; i++)
+                {
+                    
+                    document.writeln(i);
+                    document.writeln ("<br/>");
+
+                }
+                //document.writeln(i); wypisze 10 bo i jest zmienna globalna
+
+            }
+            loop();
+
+            function X()
+            {
+                XX= 5 
+            }
+            function Y()
+            {
+                document.writeln(XX);
+                document.writeln ("<br/>");
+            }
+            
+
 
 
 
