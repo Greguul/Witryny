@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+      let tablica = [5];
+      tablica[0] =15;
+      tablica[1] ="Ala";
+      tablica[2] =78; 
+      tablica[4] =true;
+      
+      document.write("rozmiar tablicy:" +tablica.length + "<br/>")
+      for (let i = 0; i < tablica.length; i++ )
+      {
+        document.writeln(tablica[i]);
+        document.writeln("<br/>");
+      }
+
+      function WyswietlZawartoscTablicy(param)
+      {
+        for (let i = 0; i < tablica.length; i++ )
+        {
+            document.write(param[i] + "<br/>");
+
+        }
+
+      }
+      WyswietlZawartoscTablicy(tablica);
+
+
+
+      function WyswietlParametry(/*p1, p2 */)
+      {
+        //document.write(p1 + "<br/>"); funkcja bezparemetrowa 
+        //document.write(p2 + "<br/>"); 
+        document.write("Wyświetlenie wszystkich parametrów <br/>");
+        for (let i =0; i < arguments.length; i++)
+            document.write(arguments[i] + "<br/>")
+      }
+      document.write("**************************<br/>")
+      WyswietlParametry(3, 7, 99, 1312);
+
+
+
+      /* Napisz funkcję która jako parametr przyjmie tablice i wyświetli
+      największą liczbe z tej tablicy */
+
+      function WyswietlNajwiekszaLiczbe(parametr)
+      document.write("Wyświetl największą liczbę");
+    
+      for (let i = 0; i < parametr.length; i++)
+
+    </script>
+</body>
+</html>
