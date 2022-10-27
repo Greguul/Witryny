@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykładowy program</title>
+</head>
+<body>
+     <script> 
+     //obiekty typu String 
+     let tekst ="Ala ma kota";
+    document.write("'" + tekst + "' ma długość "
+    + tekst.length + "<br/>");
+
+    let podtekst = tekst.substring(7,11); 
+    document.write(podtekst + "<br/>");
+
+    document.write(tekst[5] + "<br/>"); //wywoluje piaty znak
+    document.write(tekst.toUpperCase() + "<br/>"); // powieksza liter
+    document.write(tekst.toLowerCase() + "<br/>"); // zmniejsza litery 
+
+
+    let nowyTekst = new String ("Nowy Tekst");
+    document.write(tekst);
+
+    //obiekty typu Array
+    
+    let tab1 = [];
+    let tab2 = new Array();
+    let tab3 = new Array(5);
+    
+    
+    tab1 = ["Ola" , "Ala" , "Ela"]; 
+    document.write("Tablica:<br/>");
+    document.write(tab1.join() + "<br/>");
+    tab1.sort(); 
+    document.write(tab1.join() + "<br/>");
+
+    tab1 =[5, 1, /*"Ela"*/, 12, 8, ];
+    document.write(tab1.join() + "<br/>");
+    tab1.sort(); 
+    document.write(tab1.join() + "<br/>");
+    
+
+    function PorownajLiczby (a, b)
+    {
+
+        /*
+            1 - a > b
+            0 - a == b
+            -1 - a < b 
+        */
+       if (a.cena> b.cena)
+        return 1; 
+       if ( a == b)
+        return 0;
+        if (a < b)
+        return -1;
+
+
+    }
+
+    function BubbleSort(tab /*funkcjaPorownania*/)
+    {
+        for (let i = 0; i< tab.length -1; i++)
+           for (let j=0; j< tab.length -1; j++ )
+              if(tab[j] > tab[j+1])
+
+                 {
+                    let tmp = tab[1];
+                    tab[j] = tab[j+1];
+                    tab[j+1] = tmp;
+
+                 }
+    }
+    
+    //obiekt typu Date 
+    
+
+    let data = new Date();
+    document.write(data.toLocaleString() + "<br/>");
+    document.write(data.toString() + "<br/>");
+    document.write(data.toUTCString() + "<br/>");
+
+
+   document.write("Rok:" + data.getFullYear () + "<br/>");
+    document.write("Miesiac:" + data.getMonth () + "<br/>");
+    document.write("Dzień:" + data.getDay () + "<br/>");
+    document.write("Godzina:" + data.getHours () + "<br/>");
+    document.write("Minuta:" + data.getMinutes () + "<br/>");
+    document.write("Sekunda:" + data.getSeconds () + "<br/>");
+    document.write("Milisekunda:" + data.getMilliseconds () + "<br/>");
+
+
+
+
+
+// Napisz funkcje ktora wyswietli na stronie informacje o czasie
+
+//Dzisiaj jest Czwartek, 27 pazdziernika 2022 roku 
+// godzina 09;33;03
+    
+   let dat = new Date(); 
+    document.write("Year:" + dat.getFullYear () + "  " );
+    document.write("Month:" + dat.getMonth  ()  + "   ");
+    document.write("Day:" +dat.getDay() + "  " )
+    document.write("Hour:" + data.getHours () + " ");
+    document.write("Minute:" + data.getMinutes () + "  ");
+    document.write("Seconds:" + data.getSeconds () + "  ");
+
+  
+
+
+    
+    
+    
+    
+    
+    
+    
+    </script> 
+
+
+</body>
+</html>
